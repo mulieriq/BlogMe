@@ -9,20 +9,19 @@ class PagesController extends Controller
     {
         //passing data to a page
         $title = " My Title";
-        return view('pages.index' , compact('title'));
+        return view('pages.index', compact('title'));
     }
 
     public function about()
     {
         //method 2 of passing data to page
-        return view('pages.about')->with('title',$title);
+        return view('pages.about')->with('title', $title);
     }
     public function services()
-
     {
         $data = array(
-            'title'=>'Services',
-            'services'=>['Web Design' , 'Programming','Mobile']
+            'title' => 'Services',
+            'services' => ['Web Design', 'Programming', 'Mobile'],
         );
         //passing an array
         return view('pages.services')->with($data);
